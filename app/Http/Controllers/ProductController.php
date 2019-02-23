@@ -24,6 +24,13 @@ class ProductController extends Controller
             'product' => $product
         ]);
     }
+    public function buy(Product $product)
+    {
+        return view('product.buy', [
+            'product' => $product
+        ]);
+    }
+    
 
     public function create()
     {

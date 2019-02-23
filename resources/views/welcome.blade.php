@@ -10,16 +10,16 @@
         @foreach($products as $product)
             <div class="col-xl-3 col-md-4 col-sm-6 ">
                 <a href="{{ route('product.view', $product->id) }}">
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm" style=" :hover">
                     <img src="{{ $product->image }}" class="card-img-top" alt="{{ $product->name }}">
                     <div class="card-body">
-                    <p class="card-title" style="color:black;font-weight:bold;">{{ $product->name }}</p>
+                    <p class="card-title" style="color:black; font-weight:bold;">{{ $product->name }}</p>
                     <span>
                         <p class="d-inline text-muted">Price : </p> 
                         <del class="d-inline text-denger"> {{$product->price}}</del>
                     </span>
-                    <span>
-                        <p class="d-inline text-muted">  Discount : </p> 
+                    <span class="float-right">
+                        <p class="d-inline text-muted"> Discount : </p> 
                         <p class="d-inline text-muted"> {{$product->discount}}%</p>
                     </span>
                     <br>
