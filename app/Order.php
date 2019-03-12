@@ -14,4 +14,10 @@ class Order extends Model
     {
         return $this->belongsTo('App\User');
     }
+    protected $fillable = [
+        'user_id', 'product_id', 'address', 'quantity'
+    ];
 }
+
+
+
